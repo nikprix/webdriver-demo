@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Contains helper methods for Webdriver.
  *
- * @author mykola.prykhodko
+ * @author nikprix
  */
 public class WebDriverUtil {
 

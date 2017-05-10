@@ -4,7 +4,7 @@ package com.mykolabs.apple.util;
  * Time units ENUM which is used throughout the application.
  * Good read - https://crunchify.com/why-and-for-what-should-i-use-enum-java-enum-examples/
  *
- * @author mykola.prykhodko
+ * @author nikprix
  */
 public enum TimeUnit {
     SEC_1(1),

@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Manager creation of folders for saving screenshots.
  *
- * @author mykola.prykhodko
+ * @author nikprix
  */
 public class FolderManager {
 

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * Manages project's properties.
  *
- * @author mykola.prykhodko
+ * @author nikprix
  */
 public class PropertiesReader {
 

@@ -3,7 +3,7 @@ package com.mykolabs.apple.util;
 /**
  * Provides useful methods for managing time values.
  *
- * @author mykola.prykhodko
+ * @author nikprix
  */
 public class TimeManager {
 

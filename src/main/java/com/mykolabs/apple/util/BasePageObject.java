@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Base class for inheriting by page object classes.
  *
- * @author mykola.prykhodko
+ * @author nikprix
  */
 public abstract class BasePageObject extends LoadableComponent<BasePageObject> {
 

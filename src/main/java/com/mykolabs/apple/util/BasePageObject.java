@@ -122,6 +122,22 @@ public abstract class BasePageObject extends LoadableComponent<BasePageObject> {
     }
 
     /**
+     * Returns the text value of an element via its byLocator. Error is
+     * logged in case if element is not found and test continues.
+     *
+     * @param byLocator
+     * @return
+     */
+    public String getElemText(By byLocator) {
+        WebElement element = findElementThatIsPresent(byLocator, 0);
+        if (element == null) {
+            BasePageObject.this.errorForNotFoundElement(byLocator);
+            return "";
+        }
+        return element.getText();
+    }
+
+    /**
      * Returns boolean state of the visibility of an element by provided
      * locator.
      *

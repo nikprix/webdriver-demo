@@ -26,6 +26,7 @@ public class SignupPageImpl extends BasePageObject implements SignupPage {
     @FindBy(id = "dmPermission")
     WebElement ckboxAnnouncements;
 
+    final By btnSubscribeLocator = By.id("submitData");
     final By signupConfirmationEmail = By.id("address");
     final By emailFieldLocator = By.id("emailAddress");
     final By confirmationEmailFieldLocator = By.id("confirmEmailAddress");
@@ -49,6 +50,11 @@ public class SignupPageImpl extends BasePageObject implements SignupPage {
     }
 
     @Override
+    public void preferenceChckBxClick() {
+        click(ckboxAnnouncements);
+    }
+
+    @Override
     public void enterEmail(String email) {
         type(email, emailField);
     }
@@ -62,6 +68,13 @@ public class SignupPageImpl extends BasePageObject implements SignupPage {
     public void submitEmail(String email) {
         enterEmail(email);
         confirmEmail(email);
+        subsribeButtonClick();
+    }
+    
+        @Override
+    public void submitDifferentEmails(String email1, String email2) {
+        enterEmail(email1);
+        confirmEmail(email2);
         subsribeButtonClick();
     }
 
@@ -82,6 +95,11 @@ public class SignupPageImpl extends BasePageObject implements SignupPage {
     @Override
     public int extractedEmailValueLength() {
         return getInputText(emailFieldLocator, "value").length();
+    }
+
+    @Override
+    public String sibscribeBtnClassValue() {
+        return getAttributeValue(btnSubscribeLocator, "class");
     }
 
 }

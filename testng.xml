@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AppleSignUp_Suite1" verbose="1">
+    <test name="Sign_Up_Test1">
+        
+        <parameter name="email1" value="valid-email123@gmail.com"/> 
+        <parameter name="email2" value="valid-email12@gmail.com"/>
+                
+        <groups>
+            <define name="allTests">
+                <include name="graphical"/>
+                <include name="negative"/>
+                <include name="boundary"/>
+                <include name="positive"/>
+                <!-- <exclude name=""/> -->
+            </define>
+            
+            <define name="highPriority">
+                <include name="priority"/>
+            </define>
+
+            <!--<define name="sanity">
+                <include name=""/>
+                <exclude name=""/>
+            </define>-->
+
+            <run>
+                <include name="allTests"/>
+                <!--<include name="highPriority"/>-->
+                <!-- <exclude name="" /> -->
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.mykolabs.apple.tests" />
+        </packages>
+    </test>
+
+</suite>
